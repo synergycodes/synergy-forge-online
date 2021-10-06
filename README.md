@@ -2,6 +2,10 @@
 
 Kod powstały w ramach webinarów Synergy Forge Online #1. 
 
+## Prelegenci
+- Tomek Świstak [@tswistak](https://github.com/tswistak)
+- Kuba Kubacki [@kbcki](https://github.com/kbcki)
+
 ## Linki do webinarów
 
 - Część 1 - tworzenie aplikacji w React: <https://www.youtube.com/watch?v=yQkvt4Bwvts>
