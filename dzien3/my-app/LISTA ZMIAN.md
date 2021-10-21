@@ -1,0 +1,39 @@
+# Lista zmian
+
+- Dodano folder `assets`, do którego przekopiowano wszystkie grafiki, które były umieszczone na mockupach (w formacie SVG)
+- Dodano plik `consts/theme.ts`, gdzie ustawiamy kolorystykę komponentów MUIWszystkie opcje, które można zmienić (wraz z wartościami domyślnymi), znajdziecie tutaj: <https://mui.com/customization/default-theme/>. Co zrobiliśmy:
+  - Zmieniliśmy kolor tekstu na czarny
+  - Nadpisaliśmy domyślny styl wszystkich przycisków. Domyślnie mają styl contained, a także zmieniliśmy jego kolorystykę. Do tego na każdy przycisk, niezależnie od typu, dajemy margines.
+- `index.tsx`: dodano ThemeProvider, aby wykorzystać utworzony powyżej theme (<https://mui.com/styles/api/#themeprovider>)
+- `public/index.html`: dodano czcionkę Roboto <https://fonts.google.com/specimen/Roboto> (domyślna w Material UI)
+- `components/Header.tsx`:
+  - dodano tło do AppBar
+  - dodano ostylowanie tekstu, aby bardziej przypominał mockup
+  - dodano logo aplikacji (zaimportowano SVG jako adres do obrazka)
+  - dodano dodatkowy import czystych styled-components pod inną nazwą, aby móc ostylować `<img>` (importujemy pod inną nazwą niż domyślna)
+  - dodano margines do logo, aby była wyrównana odległość do ikonek w menu
+- `components/Menu.tsx`:
+  - podmieniono ikony, wykorzystując komponent SvgIcon (<https://mui.com/components/icons/#svgicon>) oraz wbudowany w Create-React-App sposób importowania SVG jako komponenty (<https://create-react-app.dev/docs/adding-images-fonts-and-files/#adding-svgs>)
+  - SvgIcon zostało ostylowane dodatkowo, aby usunąć konflikty z domyślnymi stylami MUI; także pomniejszono w tym miejscu ikony
+  - przeniesiono activeClassName z linka do stałej
+  - do nieaktywnego linka dodano zmianę koloru tekstu i linka
+  - dostosowano styl tekstu linka
+  - pomniejszono wielkość przycisku, aby tło lepiej wyglądało (dodano flex na Link i zmniejszono szerokość przycisku)
+  - zaokrąglamy rogi przycisku za pomocą border-radius
+  - dodano marginesy między elementami w menu
+- `components/TablePage/Table.tsx`:
+  - dodano toolbar (<https://mui.com/components/data-grid/components/#heading-toolbar>)
+  - usunięto ramkę z datagrida
+  - zmieniono div na ostylowany Box
+- Dodano plik `components/DataChooser.tsx` (w głównym folderze, ponieważ użyjemy go też w ChartPage):
+  - przeniesiono tam przyciski z `components/TablePage/TablePage.tsx`
+  - zrobiono przyjmowanie currentData i setCurrentData z propsów (typ wzięliśmy taki sam, jak zwraca React w useState, ponieważ ustawienie stanu może przyjąć albo wartość, albo funkcję modyfikującą aktualną wartość; typ można sprawdzić po najechaniu myszką na element setCurrentData zwracany przez useState). Przy okazji, trzeba było w `components/TablePage/TablePage.tsx` jawnie otypować useState za pomocą `<>`, aby nie było konfliktów typów.
+  - zmieniono Button na IconButton i użyto ikon z mockupów
+  - ostylowano IconButton aby aktywny miał niebieskie tło i rozmiar był stały niezależnie od wielkości ikonki. Użyliśmy dla ułatwienia typ any, aby uniknąć problemów z TypeScript, aczkolwiek warto pomyśleć nad lepszym otypowaniem.
+- `components/App.tsx`: zmieniono szerokość Containera, aby zajmował domyślnie więcej ekranu.
+- `components/ChartPage/ChartPage.tsx`:
+  - dodano stan, analogicznie do TablePage
+  - dodano DataChooser
+  - zwiększono wykres
+  - wydzielono Chart do oddzielnego komponentu
+  
