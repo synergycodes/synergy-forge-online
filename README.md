@@ -3,8 +3,8 @@
 Kod powstały w ramach webinarów Synergy Forge Online #1. 
 
 ## Prelegenci
-- Tomek Świstak [@tswistak](https://github.com/tswistak)
-- Kuba Kubacki [@kbcki](https://github.com/kbcki)
+- Tomek Świstak [@tswistak](https://github.com/tswistak), [profil na LI](https://www.linkedin.com/in/tomasz-swistak/)
+- Kuba Kubacki [@kbcki](https://github.com/kbcki), [profil na LI](https://www.linkedin.com/in/jakub-kubacki/)
 
 ## Linki do webinarów
 
