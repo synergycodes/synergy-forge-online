@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  backend:
+    image: jakubkubacki/sfo-backend
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile
+  frontend:
+    image: jakubkubacki/sfo-frontend
+    build:
+      context: ./my-app
+      dockerfile: ./Dockerfile
+      args:
+        REACT_APP_API_URL: /api
+    depends_on:
+      - backend
+    ports:
+      - 80:80
+
