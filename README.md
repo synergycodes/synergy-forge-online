@@ -11,7 +11,7 @@ Kod powstały w ramach webinarów Synergy Forge Online #1.
 - Część 1 - tworzenie aplikacji w React: <https://www.youtube.com/watch?v=yQkvt4Bwvts>
 - Część 2 - wykorzystanie biblioteki komponentów: <https://www.youtube.com/watch?v=2t6Fph0wNKo>
 - Część 3 - backend w GraphQL: <https://www.youtube.com/watch?v=LcXOpFLjuPs>
-- Część 4 - coming soon (3.11)
+- Część 4 - deployment na Azure: <https://www.youtube.com/watch?v=9QnkjWc1pCY>
 
 ## Dodatkowe linki
 
